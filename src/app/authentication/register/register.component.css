@@ -1,0 +1,13 @@
+.register-card {
+  width: 400px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.example-header-image {
+  background-size: cover;
+}
+
+.example-margin {
+  margin: 0 10px;
+}

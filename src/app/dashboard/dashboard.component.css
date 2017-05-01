@@ -1,0 +1,43 @@
+.example-container {
+  width: calc(100vw - 16px);
+  height: calc(100vh - 16px);
+  border: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+.example-sidenav-content {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.example-sidenav {
+  padding: 20px;
+}
+
+.example-card {
+  width: 280px;
+}
+
+.example-header-image {
+  background-image: url('https://scontent.fhfa1-1.fna.fbcdn.net/v/t1.0-9/10177512_10206785501988525_772361761926093589_n.jpg?oh=670fddd74b7e37640c4e4f7802317c77&oe=598C47F8');
+  background-size: cover;
+  height: 130px;
+  width: 130px;
+}
+
+a.sidenav-button{
+  width:280px;
+}
+
+.openNav{
+  position: fixed;
+  top: 90vh;
+  left:10px;
+}
+
+md-card-header{
+  margin-bottom: 8%;
+}
+
+
