@@ -1,5 +1,45 @@
-<h1>projects works</h1>
+<div class="project">
+  <div layout="row" class="projectsSelect">
 
-<a class="sidenav-button" md-raised-button routerLink="myProjects">Add New Project</a>
-<a class="sidenav-button" md-raised-button routerLink="myProjects">My Projects</a>
+    <h1>Today's Project:</h1>
 
+    <md-select placeholder="Choose your project for today" [formControl]="selectedProject">
+
+      <md-option *ngFor="let todaysProject of projects" [value]="todaysProject">
+        {{todaysProject.projectName}}
+      </md-option>
+
+    </md-select>
+
+  </div>
+
+  <div layout="row" *ngIf="selectedProject.value">
+
+    <table>
+      <tr>
+        <th>Project Name</th>
+        <th>Time Spent</th>
+        <th>Start/Stop</th>
+      <tr>
+        <td>{{selectedProject.value.projectName}}</td>
+        <td>{{selectedProject.value.spent}}</td>
+        <td>{{tickes | minutesToHourFormat}} <p-toggleButton onLabel="Stop"
+                                                             offLabel="Start"
+                                                             (onChange)="runOrStopTimer()"
+                                                             formControl]="timerRunning"
+                                                             [style]="{'width':'100px'}"></p-toggleButton> </td>
+
+      </tr>
+    </table>
+
+  </div>
+
+  <div class="projectsButtons">
+
+    <button md-raised-button (click)="openDialog()">Add New Project</button>
+    <a class="sidenav-button" md-raised-button routerLink="myProjects">My Projects</a>
+
+
+
+  </div>
+</div>

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {Project} from './project';
+import {Project} from '../project';
 import {MyProjectsServiceService} from './my-projects-service.service';
 
 @Component({
@@ -9,15 +9,17 @@ import {MyProjectsServiceService} from './my-projects-service.service';
 })
 export class MyProjectsComponent implements OnInit {
 
-  myProjectsService: MyProjectsServiceService;
+  public myProjectsService: MyProjectsServiceService;
 
-  clientsArr: string[];
-  projectDetailes: Project[];
+  public clientsArr: string[];
+  public projectDetailes: Project[];
 
   constructor(myProjectsService: MyProjectsServiceService) {
+
     this.myProjectsService = myProjectsService;
     this.clientsArr = this.myProjectsService.GetClients();
     this.projectDetailes = this.myProjectsService.GetProjectsDetailes();
+
   }
 
   ngOnInit() {

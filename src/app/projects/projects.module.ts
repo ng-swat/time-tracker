@@ -7,14 +7,18 @@ import {MaterialUtillModule} from '../material-utill/material-utill.module';
 import {RouterModule} from '@angular/router';
 import {TimeTrackerRouter} from '../router/time-tracker-router';
 import {MyProjectsServiceService} from './my-projects/my-projects-service.service';
+import {ReactiveFormsModule} from '@angular/forms';
+import { MinutesToHourFormatPipe } from './minutes-to-hour-format.pipe';
 
 @NgModule({
   imports: [
     CommonModule,
     MaterialUtillModule,
-    RouterModule.forRoot(TimeTrackerRouter)
+    RouterModule.forRoot(TimeTrackerRouter),
+    ReactiveFormsModule
   ],
-  declarations: [MyProjectsComponent, NewProjectsComponent, ProjectsComponent],
+  declarations: [MyProjectsComponent, NewProjectsComponent, ProjectsComponent, MinutesToHourFormatPipe],
+  entryComponents: [ProjectsComponent],
   exports: [ProjectsComponent],
   providers: [MyProjectsServiceService]
 })

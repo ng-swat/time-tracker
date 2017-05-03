@@ -7,16 +7,27 @@
 .example-sidenav-content {
   display: flex;
   height: 100%;
-  align-items: center;
+  margin-top: 24px;
   justify-content: center;
 }
 
 .example-sidenav {
   padding: 20px;
+  width: 310px;
+  background: rgba(57, 57, 57, 0.8);
+}
+
+.mat-button-wrapper{
+  color: white;
+}
+
+h1{
+  text-align: center;
 }
 
 .example-card {
-  width: 280px;
+  width: 230px;
+  background: #4c4b4b;
 }
 
 .example-header-image {
@@ -27,7 +38,15 @@
 }
 
 a.sidenav-button{
-  width:280px;
+  width:230px;
+  background: #606060;
+  color: white;
+  line-height: 40px;
+}
+
+a.sidenav-button:hover{
+  background: lightgrey;
+
 }
 
 .openNav{
@@ -40,4 +59,14 @@ md-card-header{
   margin-bottom: 8%;
 }
 
+md-card-title{
+  color: white;
+}
+md-card-subtitle{
+  color: #9E9E9E;
+}
 
+.dashboardIcons{
+  height: 18px;
+  font-size: 18px;
+}

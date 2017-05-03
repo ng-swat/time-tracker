@@ -1,14 +1,25 @@
 <md-sidenav-container class="example-container">
-  <md-sidenav #sidenav class="example-sidenav">
+  <md-sidenav #sidenav mode="side" opened="true" class="example-sidenav">
 
-    <h1>Welcome To Time Tracker</h1>
 
     <md-card class="example-card">
       <md-card-content>
-        <a class="sidenav-button" md-raised-button routerLink="home">Home</a> <!--To close the bar after a click add :     (click)="sidenav.close()"-->
-        <a class="sidenav-button" md-raised-button routerLink="projects">Projects</a>
-        <a class="sidenav-button" md-raised-button routerLink="reports">Reports</a>
-        <a class="sidenav-button" md-raised-button routerLink="manage">Manage</a>
+        <a class="sidenav-button" md-raised-button routerLink="home">
+          <md-icon class="dashboardIcons">home</md-icon>
+          Home
+        </a>
+        <a class="sidenav-button" md-raised-button routerLink="projects">
+          <md-icon class="dashboardIcons">timelapse</md-icon>
+          Projects
+        </a>
+        <a class="sidenav-button" md-raised-button routerLink="reports">
+          <md-icon class="dashboardIcons">report</md-icon>
+          Reports
+        </a>
+        <a class="sidenav-button" md-raised-button routerLink="manage">
+          <md-icon class="dashboardIcons">build</md-icon>
+          Manage
+        </a>
       </md-card-content>
 
     </md-card>
@@ -24,9 +35,18 @@
 
       <md-card-content>
         <p>
-          <a class="sidenav-button" md-raised-button routerLink="profile">My Profile</a>
-          <a class="sidenav-button" md-raised-button routerLink="login">Login(Temporary)</a>
-          <a class="sidenav-button" md-raised-button routerLink=".">Log Out</a>
+          <a class="sidenav-button" md-raised-button routerLink="profile">
+            <md-icon class="dashboardIcons">account_circle</md-icon>
+            My Profile
+          </a>
+          <a class="sidenav-button" md-raised-button routerLink="login">
+            <md-icon class="dashboardIcons" style="color: greenyellow;">power_settings_new</md-icon>
+            Login(Temporary)
+          </a>
+          <a class="sidenav-button" md-raised-button routerLink=".">
+            <md-icon class="dashboardIcons" style="color: red;">power_settings_new</md-icon>
+            Log Out
+          </a>
 
       </md-card-content>
 
@@ -39,9 +59,6 @@
 
     <router-outlet></router-outlet>
 
-    <button md-button (click)="sidenav.open()" class="openNav">
-      Open sidenav
-    </button>
   </div>
 
 </md-sidenav-container>
