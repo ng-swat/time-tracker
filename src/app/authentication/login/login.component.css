@@ -1,0 +1,17 @@
+.login{
+  align-items: center;
+}
+
+.login-card {
+  width: 400px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.example-header-image {
+  background-size: cover;
+}
+
+.registerLink{
+  font-size: 12px;
+}

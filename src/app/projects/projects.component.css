@@ -1,0 +1,18 @@
+.projectsButtons{
+  margin-top: 15%;
+}
+
+.project{
+  width:650px;
+  text-align: center;
+
+}
+
+table{
+  margin-top: 20px;
+}
+
+.stop{
+  background: red;
+}
+

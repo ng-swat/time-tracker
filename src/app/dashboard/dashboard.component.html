@@ -1,0 +1,64 @@
+<md-sidenav-container class="example-container">
+  <md-sidenav #sidenav mode="side" opened="true" class="example-sidenav">
+
+
+    <md-card class="example-card">
+      <md-card-content>
+        <a class="sidenav-button" md-raised-button routerLink="home">
+          <md-icon class="dashboardIcons">home</md-icon>
+          Home
+        </a>
+        <a class="sidenav-button" md-raised-button routerLink="projects">
+          <md-icon class="dashboardIcons">timelapse</md-icon>
+          Projects
+        </a>
+        <a class="sidenav-button" md-raised-button routerLink="reports">
+          <md-icon class="dashboardIcons">report</md-icon>
+          Reports
+        </a>
+        <a class="sidenav-button" md-raised-button routerLink="manage">
+          <md-icon class="dashboardIcons">build</md-icon>
+          Manage
+        </a>
+      </md-card-content>
+
+    </md-card>
+
+
+
+    <md-card class="example-card">
+      <md-card-header>
+        <div md-card-avatar class="example-header-image"></div>
+        <md-card-title>Benor Biton</md-card-title>
+        <md-card-subtitle>500Tech</md-card-subtitle>
+      </md-card-header>
+
+      <md-card-content>
+        <p>
+          <a class="sidenav-button" md-raised-button routerLink="profile">
+            <md-icon class="dashboardIcons">account_circle</md-icon>
+            My Profile
+          </a>
+          <a class="sidenav-button" md-raised-button routerLink="login">
+            <md-icon class="dashboardIcons" style="color: greenyellow;">power_settings_new</md-icon>
+            Login(Temporary)
+          </a>
+          <a class="sidenav-button" md-raised-button routerLink=".">
+            <md-icon class="dashboardIcons" style="color: red;">power_settings_new</md-icon>
+            Log Out
+          </a>
+
+      </md-card-content>
+
+    </md-card>
+
+
+  </md-sidenav>
+
+  <div class="example-sidenav-content">
+
+    <router-outlet></router-outlet>
+
+  </div>
+
+</md-sidenav-container>

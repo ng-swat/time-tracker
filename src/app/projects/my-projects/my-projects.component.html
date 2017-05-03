@@ -1,0 +1,16 @@
+<table>
+  <tr>
+    <th *ngFor="let title of clientsArr">{{title}}</th>
+    <tr *ngFor="let project of projectDetailes">
+      <td>{{project.projectName}}</td>
+      <td>{{project.startDate | date: 'dd/MM/yyyy'}}</td>
+      <td>{{project.endDate | date: 'dd/MM/yyyy'}}</td>
+      <td>{{project.spent}}</td>
+      <td>{{project.remaning}}</td>
+      <td>{{project.notes}}</td>
+      <td>{{project.timeSpentToday}}</td>
+    </tr>
+</table>
+
+
+
