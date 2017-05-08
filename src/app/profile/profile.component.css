@@ -1,0 +1,52 @@
+.containerGrid {
+  width: calc(85vw - 16px);
+}
+
+
+.header-image {
+  background-image: url('https://scontent.fhfa1-1.fna.fbcdn.net/v/t1.0-9/10177512_10206785501988525_772361761926093589_n.jpg?oh=670fddd74b7e37640c4e4f7802317c77&oe=598C47F8');
+  background-size: cover;
+  height: 215px;
+  width: 215px;
+  position: relative;
+  top: -5px;
+}
+
+.example-card {
+  width: 230px;
+  background: white;
+  box-shadow: 0 0 0 0 rgba(0,0,0,0);
+}
+
+md-card-content{
+  text-align: center;
+
+}
+
+.nameText{
+  font-size: 30px;
+}
+
+.companyText{
+  position: relative;
+  top: -16px;
+  font-size: 18px;
+}
+
+
+
+/*The editable profile data*/
+
+.register-card {
+  width: 400px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.example-header-image {
+  background-size: cover;
+}
+
+.example-margin {
+  margin: 0 10px;
+}

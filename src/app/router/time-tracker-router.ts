@@ -8,6 +8,7 @@ import {ProfileComponent} from '../profile/profile.component';
 import {RegisterComponent} from '../authentication/register/register.component';
 import {MyProjectsComponent} from '../projects/my-projects/my-projects.component';
 import {NewProjectsComponent} from '../projects/new-projects/new-projects.component';
+import {ForgetPasswordComponent} from '../authentication/forget-password/forget-password.component';
 
 
 export const TimeTrackerRouter: Routes = [
@@ -46,5 +47,9 @@ export const TimeTrackerRouter: Routes = [
   {
     path: 'register',
     component: RegisterComponent
+  },
+  {
+    path: 'forgetPassword',
+    component: ForgetPasswordComponent
   },
 ];

@@ -3,13 +3,17 @@ import {CommonModule} from '@angular/common';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {NoopAnimationsModule} from '@angular/platform-browser/animations';
 import {
-  MdButtonModule, MdCardModule, MdCheckboxModule, MdChipsModule, MdDialogModule, MdIconModule, MdInputModule,
+  MdButtonModule, MdCardModule, MdCheckboxModule, MdChipsModule, MdDialogModule, MdGridListModule, MdIconModule,
+  MdInputModule, MdProgressSpinnerModule,
   MdSelectModule,
   MdSidenavModule
 } from '@angular/material';
 
 import 'hammerjs';
-import {ButtonModule, CheckboxModule, ToggleButtonModule} from 'primeng/primeng';
+import {
+  ButtonModule, CheckboxModule, DataTableModule, InputTextModule, SharedModule,
+  ToggleButtonModule
+} from 'primeng/primeng';
 
 
 @NgModule({
@@ -28,7 +32,12 @@ import {ButtonModule, CheckboxModule, ToggleButtonModule} from 'primeng/primeng'
     MdChipsModule,
     CheckboxModule, // temporary
     ButtonModule, // temporary
-    ToggleButtonModule // temporary
+    ToggleButtonModule, // temporary,
+    DataTableModule,
+    SharedModule,
+    MdGridListModule,
+    InputTextModule,
+    MdProgressSpinnerModule
   ],
   declarations: [],
   exports: [BrowserAnimationsModule,
@@ -44,7 +53,12 @@ import {ButtonModule, CheckboxModule, ToggleButtonModule} from 'primeng/primeng'
     MdChipsModule,
     CheckboxModule, // temporary
     ButtonModule, // temporary
-    ToggleButtonModule // temporary
+    ToggleButtonModule, // temporary
+    DataTableModule,
+    SharedModule,
+    MdGridListModule,
+    InputTextModule,
+    MdProgressSpinnerModule
   ]
 })
 export class MaterialUtillModule {

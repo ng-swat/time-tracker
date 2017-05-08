@@ -26,7 +26,7 @@
         <td>{{tickes | minutesToHourFormat}} <p-toggleButton onLabel="Stop"
                                                              offLabel="Start"
                                                              (onChange)="runOrStopTimer()"
-                                                             formControl]="timerRunning"
+                                                             [formControl]="timerRunning"
                                                              [style]="{'width':'100px'}"></p-toggleButton> </td>
 
       </tr>

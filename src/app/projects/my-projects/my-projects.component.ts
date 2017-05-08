@@ -17,12 +17,12 @@ export class MyProjectsComponent implements OnInit {
   constructor(myProjectsService: MyProjectsServiceService) {
 
     this.myProjectsService = myProjectsService;
-    this.clientsArr = this.myProjectsService.GetClients();
-    this.projectDetailes = this.myProjectsService.GetProjectsDetailes();
 
   }
 
   ngOnInit() {
+    this.clientsArr = this.myProjectsService.GetClients();
+    this.projectDetailes = this.myProjectsService.GetProjectsDetailes();
   }
 
 }
