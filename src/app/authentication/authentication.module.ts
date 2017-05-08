@@ -7,6 +7,7 @@ import {ReactiveFormsModule} from '@angular/forms';
 import {MaterialUtillModule} from '../material-utill/material-utill.module';
 import {RouterModule} from '@angular/router';
 import {TimeTrackerRouter} from '../router/time-tracker-router';
+import {AuthenticationService} from './authentication.service';
 
 
 @NgModule({
@@ -17,6 +18,7 @@ import {TimeTrackerRouter} from '../router/time-tracker-router';
     RouterModule.forRoot(TimeTrackerRouter)
   ],
   declarations: [LoginComponent, RegisterComponent, ForgetPasswordComponent],
+  providers   : [AuthenticationService],
   exports: [LoginComponent, RegisterComponent, ForgetPasswordComponent]
 })
 export class AuthenticationModule { }

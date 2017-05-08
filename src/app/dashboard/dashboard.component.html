@@ -1,5 +1,5 @@
 <md-sidenav-container class="example-container">
-  <md-sidenav #sidenav mode="side" opened="true" class="example-sidenav">
+  <md-sidenav *ngIf="(user | async).permissionGroup !== undefined" #sidenav mode="side" opened="true" class="example-sidenav">
 
 
     <md-card class="example-card">
@@ -34,7 +34,7 @@
       </md-card-header>
 
       <md-card-content>
-        <p>
+
           <a class="sidenav-button" md-raised-button routerLink="profile">
             <md-icon class="dashboardIcons">account_circle</md-icon>
             My Profile

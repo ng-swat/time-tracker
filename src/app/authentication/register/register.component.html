@@ -1,65 +1,79 @@
 <div class="register">
 
-  <section layout="row" layout-sm="column" layout-align="end center" layout-wrap>
+  <form [formGroup]="registerForm"
+        (ngSubmit)="tryRegister()">
 
-    <md-card class="register-card">
+    <section layout="row" layout-sm="column" layout-align="end center" layout-wrap>
 
-      <md-card-title>Register</md-card-title>
-      <md-card-subtitle>Enter your registration detailes</md-card-subtitle>
+      <md-card class="register-card">
 
-      <md-card-content>
+        <md-card-title>Register</md-card-title>
+        <md-card-subtitle>Enter your registration detailes</md-card-subtitle>
 
-        <div layout="row">
-          <md-input-container>
-            <input mdInput placeholder="Name">
-          </md-input-container>
-        </div>
+        <md-card-content>
 
-        <div layout="row">
-          <md-input-container>
-            <input mdInput placeholder="Company Name">
-          </md-input-container>
-        </div>
+          <div layout="row">
+            <md-input-container>
+              <input mdInput placeholder="Name*" formControlName="name">
+            </md-input-container>
+          </div>
 
-        <div layout="row">
-          <md-input-container>
-            <input mdInput placeholder="Phone">
-          </md-input-container>
-        </div>
+          <div layout="row">
+            <md-input-container>
+              <input mdInput placeholder="Company Name*" formControlName="companyName">
+            </md-input-container>
+          </div>
 
-        <div layout="row">
-          <md-input-container>
-            <input mdInput placeholder="Email">
-          </md-input-container>
-        </div>
+          <div layout="row">
+            <md-input-container>
+              <input mdInput placeholder="Phone" formControlName="phone">
+            </md-input-container>
+          </div>
 
-        <div layout="row">
-          <md-input-container>
-            <input mdInput placeholder="Password">
-          </md-input-container>
-        </div>
-        <div layout="row">
-          <md-input-container>
-            <input mdInput placeholder="Confirm Password">
-          </md-input-container>
-        </div>
+          <div layout="row">
+            <md-input-container>
+              <input mdInput placeholder="Email*" formControlName="email">
+            </md-input-container>
+          </div>
 
+          <div formGroupName="passwords">
 
+            <div layout="row">
+              <md-input-container>
+                <input mdInput placeholder="Password*" formControlName="password">
+              </md-input-container>
+            </div>
+            <div layout="row">
+              <md-input-container>
+                <input mdInput placeholder="Confirm Password*" formControlName="confirmPassword">
+              </md-input-container>
+            </div>
 
-      </md-card-content>
+          </div>
 
-      <md-card-actions>
-        <div layout="row">
-          <md-checkbox>Accept Terms</md-checkbox>
-        </div>
-
-        <div layout="row">
-          <button md-button>Register Now</button>
-        </div>
-      </md-card-actions>
-    </md-card>
+          <div layout="row">
+            <md-input-container class="">
+              <textarea mdInput placeholder="Extra Notes" formControlName="extraNotes"></textarea>
+            </md-input-container>
+          </div>
 
 
 
-  </section>
+        </md-card-content>
+
+        <md-spinner *ngIf="(registration | async).pending" style="position: absolute;"></md-spinner>
+
+        <md-card-actions>
+          <div layout="row">
+            <md-checkbox formControlName="acceptTerms">Accept Terms</md-checkbox>
+          </div>
+
+          <div layout="row">
+            <button md-button type="submit">Register Now</button>
+          </div>
+        </md-card-actions>
+      </md-card>
+
+    </section>
+  </form>
 </div>

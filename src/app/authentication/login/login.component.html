@@ -2,35 +2,51 @@
 
   <section layout="row" layout-sm="column" layout-align="end center" layout-wrap>
 
-    <md-card class="login-card">
+    <form [formGroup]="loginForm"
+          (ngSubmit)="tryLogin()"
+          [ngClass]="{'submitted':ifSubmitted}">
 
-        <div md-card-avatar class="example-header-image"></div>
-        <md-card-title>Login</md-card-title>
-        <md-card-subtitle>Enter your Login detailes</md-card-subtitle>
+      <md-card class="login-card">
 
-      <!--<img md-card-image src="assets/img/examples/shiba2.jpg">-->
-      <md-card-content>
-        <div layout="row">
-          <md-input-container class="login-content">
-            <input mdInput placeholder="Email">
-          </md-input-container>
-        </div>
+          <div md-card-avatar class="example-header-image"></div>
+          <md-card-title>Login</md-card-title>
+          <md-card-subtitle>Enter your Login detailes</md-card-subtitle>
 
-        <div layout="row">
-          <md-input-container class="login-content">
-            <input mdInput placeholder="Password">
-          </md-input-container>
-        </div>
+        <md-card-content>
+          <div layout="row">
+            <md-input-container class="login-content">
+              <input mdInput placeholder="Email" formControlName="email">
+            </md-input-container>
+          </div>
 
-      </md-card-content>
-      <md-card-actions>
-        <button md-button>Login</button>
-        <button md-button>Forget Password?</button>
-        <div layout="row">
-          <a md-button routerLink="../register">Register</a>
-        </div>
-      </md-card-actions>
-    </md-card>
+          <md-spinner *ngIf="(user | async).pending" style="position: absolute;"></md-spinner>
+
+          <div layout="row">
+            <md-input-container class="login-content">
+              <input mdInput placeholder="Password" formControlName="password">
+            </md-input-container>
+          </div>
+
+        </md-card-content>
+        <md-card-actions>
+          <button md-button type="submit" (click)="ifSubmitted=true">Login</button>
+          <button md-button routerLink="../forgetPassword">Forget Password?</button>
+          <div layout="row">
+            <a md-button routerLink="../register">Register</a>
+          </div>
+        </md-card-actions>
+      </md-card>
+    </form>
+
+
+    <div class="reduxMessages">
+
+      <h2 *ngIf="(user | async).pending">Pending...</h2>
+
+      <h2 *ngIf="user | async">{{ user | async | json }}</h2>
+
+      <h2 *ngIf="user | async">{{(user | async).errors}}</h2>
+    </div>
 
 
   </section>
